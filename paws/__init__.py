@@ -39,7 +39,7 @@ class NotebookLoader:
             return mod
         
         url_segment = '/'.join([s.replace('_', ' ') for s in parts]) + '.ipynb?format=raw'
-        url = 'https://paws-public.wmflabs.org/paws-public/User:' + url_segment
+        url = 'https://public.paws.wmcloud.org/User:' + url_segment
         resp = requests.get(url)
         if resp.status_code == 404:
             # HACCKK!! To deal with folders
